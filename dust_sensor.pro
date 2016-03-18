@@ -1,4 +1,4 @@
-update=Thu 17 Mar 2016 21:14:38 CET
+update=pią, 18 mar 2016, 10:31:24
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,5 +58,5 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=ESP8266
-LibName31=dht
+LibName30=dht
+LibName31=kicad-ESP8266/ESP8266
