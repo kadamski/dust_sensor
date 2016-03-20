@@ -672,8 +672,6 @@ Wire Wire Line
 Wire Wire Line
 	3850 3650 3650 3650
 Wire Wire Line
-	3650 3650 3650 3350
-Wire Wire Line
 	4950 5600 4950 5700
 Connection ~ 4350 5600
 Wire Wire Line
@@ -688,7 +686,6 @@ Wire Wire Line
 	5500 4950 3550 4950
 Wire Wire Line
 	3550 4950 3550 3350
-Connection ~ 3650 3350
 Wire Wire Line
 	5700 5700 5700 5600
 Wire Wire Line
@@ -1075,7 +1072,7 @@ Wire Wire Line
 Text Notes 3850 6550 0    60   ~ 0
 FREE GPIOS
 Wire Notes Line
-	4950 6400 4950 7650
+	4800 6400 4800 7650
 Wire Notes Line
 	5150 7650 5050 7650
 Wire Wire Line
@@ -1104,4 +1101,39 @@ F 3 "" H 7600 1600 50  0000 C CNN
 $EndComp
 Connection ~ 7600 1350
 Connection ~ 7050 1750
+Text GLabel 3650 3100 1    60   Input ~ 0
+GPIO16
+Wire Wire Line
+	3650 3650 3650 3100
+Text GLabel 5000 7100 1    60   Input ~ 0
+GPIO16
+Text GLabel 5200 7100 1    60   Input ~ 0
+RESET
+$Comp
+L CONN_01X02 P9
+U 1 1 56EE77E2
+P 5100 7500
+F 0 "P9" V 4972 7628 50  0000 L CNN
+F 1 "DEEP" V 5063 7628 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 5100 7500 50  0001 C CNN
+F 3 "" H 5100 7500 50  0000 C CNN
+	1    5100 7500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 7100 5000 7200
+Wire Wire Line
+	5000 7200 5050 7200
+Wire Wire Line
+	5050 7200 5050 7300
+Wire Wire Line
+	5200 7100 5200 7200
+Wire Wire Line
+	5200 7200 5150 7200
+Wire Wire Line
+	5150 7200 5150 7300
+Wire Notes Line
+	5500 6400 5500 7650
+Text Notes 4850 6550 0    60   ~ 0
+DEEP SLEEP
 $EndSCHEMATC
