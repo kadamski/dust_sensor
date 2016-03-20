@@ -1,11 +1,11 @@
 (kicad_pcb (version 4) (host pcbnew no-vcs-found-product)
 
   (general
-    (links 79)
+    (links 0)
     (no_connects 0)
     (area 39.424999 30.924999 89.575001 76.075001)
     (thickness 1.6)
-    (drawings 4)
+    (drawings 5)
     (tracks 563)
     (zones 0)
     (modules 32)
@@ -1177,50 +1177,6 @@
     )
   )
 
-  (module dht:hole_4mm locked (layer F.Cu) (tedit 56EC8233) (tstamp 56EE91FC)
-    (at 42.5 34)
-    (fp_text reference "" (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad 1 thru_hole circle (at 0 0) (size 4.1 4.1) (drill 4) (layers *.Cu *.Mask F.SilkS))
-  )
-
-  (module dht:hole_4mm locked (layer F.Cu) (tedit 56EC8233) (tstamp 56EE91FD)
-    (at 86.5 34)
-    (fp_text reference "" (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad 1 thru_hole circle (at 0 0) (size 4.1 4.1) (drill 4) (layers *.Cu *.Mask F.SilkS))
-  )
-
-  (module dht:hole_4mm locked (layer F.Cu) (tedit 56EC8233) (tstamp 56EE91FE)
-    (at 86.5 73)
-    (fp_text reference "" (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad 1 thru_hole circle (at 0 0) (size 4.1 4.1) (drill 4) (layers *.Cu *.Mask F.SilkS))
-  )
-
-  (module dht:hole_4mm locked (layer F.Cu) (tedit 56EC8233) (tstamp 56EE91FF)
-    (at 42.5 73)
-    (fp_text reference "" (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "" (at 0 -0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad 1 thru_hole circle (at 0 0) (size 4.1 4.1) (drill 4) (layers *.Cu *.Mask F.SilkS))
-  )
-
   (module dht:DHT22_nohole (layer F.Cu) (tedit 56EF0EAE) (tstamp 56EF0F9D)
     (at 75 54 180)
     (path /56EB6A2E)
@@ -1248,6 +1204,53 @@
       (net 2 GND))
   )
 
+  (module dht:hole_3mm locked (layer F.Cu) (tedit 56EF1007) (tstamp 56EF1026)
+    (at 86.5 34)
+    (fp_text reference "" (at 0 0) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad 1 thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.1) (layers *.Cu *.Mask F.SilkS))
+  )
+
+  (module dht:hole_3mm locked (layer F.Cu) (tedit 56EF1007) (tstamp 56EF1057)
+    (at 86.5 73)
+    (fp_text reference "" (at 0 0) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad 1 thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.1) (layers *.Cu *.Mask F.SilkS))
+  )
+
+  (module dht:hole_3mm locked (layer F.Cu) (tedit 56EF1007) (tstamp 56EF1068)
+    (at 42.5 73)
+    (fp_text reference "" (at 0 0) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad 1 thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.1) (layers *.Cu *.Mask F.SilkS))
+  )
+
+  (module dht:hole_3mm locked (layer F.Cu) (tedit 56EF1007) (tstamp 56EF107B)
+    (at 42.5 34)
+    (fp_text reference "" (at 0 0) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value "" (at 0 -1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad 1 thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.1) (layers *.Cu *.Mask F.SilkS))
+  )
+
+  (gr_text v0.1dev (at 86.25 69.5) (layer F.Cu)
+    (effects (font (size 1 1) (thickness 0.2)))
+  )
   (gr_line (start 39.5 76) (end 39.5 31) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 89.5 76) (end 39.5 76) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 89.5 31) (end 89.5 76) (layer Edge.Cuts) (width 0.15))
