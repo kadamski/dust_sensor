@@ -600,7 +600,7 @@ U 1 1 56EB8265
 P 2550 4300
 F 0 "C1" H 2665 4346 50  0000 L CNN
 F 1 "100u" H 2665 4254 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 2588 4150 50  0001 C CNN
+F 2 "Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_HandSoldering" H 2588 4150 50  0001 C CNN
 F 3 "" H 2550 4300 50  0000 C CNN
 	1    2550 4300
 	1    0    0    -1  
