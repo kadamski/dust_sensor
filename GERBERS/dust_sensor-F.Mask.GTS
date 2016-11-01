@@ -1,11 +1,9 @@
-%TF.GenerationSoftware,KiCad,Pcbnew,no-vcs-found-product*%
-%TF.CreationDate,2016-03-20T22:20:04+01:00*%
-%TF.ProjectId,dust_sensor,647573745F73656E736F722E6B696361,rev?*%
-%TF.FileFunction,Soldermask,Top*%
+G04 #@! TF.FileFunction,Soldermask,Top*
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW no-vcs-found-product) date Sun 20 Mar 2016 22:20:04 CET*
+G04 Created by KiCad (PCBNEW 4.0.3-1.fc24-product) date Tue Nov  1 15:00:33 2016*
 %MOMM*%
+%LPD*%
 G01*
 G04 APERTURE LIST*
 %ADD10C,0.100000*%
