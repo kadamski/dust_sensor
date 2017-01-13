@@ -31,7 +31,7 @@ Please note, that there're few versions of the Nokia 5110 LCD boards. One will n
   
 As for example one in the middle in following pictures:
 
-![alt tag](https://cloud.githubusercontent.com/assets/10147619/21928618/3952b46c-d98c-11e6-8f49-6d78fa65f966.JPG)![alt tag](https://cloud.githubusercontent.com/assets/10147619/21928623/39577998-d98c-11e6-83f4-8a9756973731.JPG)
+![alt tag](https://cloud.githubusercontent.com/assets/10147619/21932079/f943a77e-d99e-11e6-88c7-9158d813aa13.JPG)![alt tag](https://cloud.githubusercontent.com/assets/10147619/21932080/f9446934-d99e-11e6-8685-cffce7c85ccd.JPG)
 
 Other two will require either some type of wire instead of just goldpins to connect proper inputs/outputs (the one on the left) or may cause the backlight of the LCD to be always ON (one on the right; not sure why though).
 Approx cost: <$2
@@ -63,15 +63,15 @@ Approx cost: <$2
  Approx cost: TODO
  
 * Other minor **electronic parts**: 
-  * LD33 (SMD) - Low drop fixed positive voltage regulator 3,3V
+  * AP1117-3.3 LDO Voltage Regulator (SMD) - Low drop fixed positive voltage regulator 3,3V
   * Capacitors (SMD): C1 = 100uF, C2 = C4 = 10uF, 
   * Resistors (SMD): R1 = R2 = R3 = R6 = R7 = R8 = 10k, R4 = 220k, R5 = 100k 
-  * Tact Switch 6x6, 13mm (THT): 3x
+  * Tact Switch 6x6, 13mm (THT) x 3 pcs
   * PINs: 
     * Single Row Male 2.54 Right Angle Pin Header Connector Strip
     * Single Row Male 2.54 Breakable Pin Header Connector Strip
     * Single Row Female 2.54 mm Pin Header Connector Strip
-  * 2.54mm Jumper Cap (Short Circuit Cap) x 4
+  * 2.54mm Jumper Cap (Short Circuit Cap) x 4 pcs
   * Female Micro USB socket type B
     
  Approx (sum) cost: <$2
@@ -83,6 +83,8 @@ Approx cost: <$2
  Approx cost: <$2
 
 #### PCB
+
+##### Schematics & ordering of the PCB
 
 I hope you're using Linux, it will be much easier this way. In this git we've prepared PCB schematics that are ready to just be sent over to a PCB factory of some sort. In order to browse those, exprort, etc one will need to install kicad.
 
@@ -97,6 +99,15 @@ Launch kicad, then select _File->Open Project_. Now select _dust_sensor.pro_ fro
 Most of the PCB factories will accept Gerber files. There's already a directory named GERBERS in the git with ready to go files, however you may want to change sth, etc, then just double click on dust_sensor.kicad_pcb in kicad, which will launch _Pcbnew_. Use _File->Fabrication Outputs_ to get what you need.
 
 Just get a quote and order. It looks that chineese factories seem to be cheaper than US/EU based ones. For some strange reason ;-)
+
+##### PCB - Known issues
+
+* The footprint for DHT22 is wrong, meaning the distance between holes is to small, causing one must bent DHT's legs in ordert ot put them into the holes. Also holes are a little bit to small in diameter, same comes for the size of the pads. Be carefull when soldering. This will be fixed in next revision.
+* There're at the moment 4 jumpers on the board, that is
+ * PWR - used for serial current metering
+ * LCD_RST - put to enable LCD, otherwise LCD's RST is connected to RST switch
+ * DHT - one can connect DHT to ESP-12E/F (via Exetender) or directly to free GPIO pin (for debug purposes)
+ * DEEP - jumper used to enable Deep Sleep mode of the ESP8266, otherwise the device will be always on. Note that in deep sleep it'll take much less current (good for battery powered applications, but the backlight of the LCD will only work during time, when the ESP is not in sleep, i.e. when it measures dust once every _interval_)
 
 ### Putting things together
 
