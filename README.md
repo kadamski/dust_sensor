@@ -107,7 +107,8 @@ Just get a quote and order. It looks that chineese factories seem to be cheaper 
  * PWR - used for serial current metering
  * LCD_RST - put to enable LCD, otherwise LCD's RST is connected to RST switch
  * DHT - one can connect DHT to ESP-12E/F (via Exetender) or directly to free GPIO pin (for debug purposes)
- * DEEP - jumper used to enable Deep Sleep mode of the ESP8266, otherwise the device will be always on. Note that in deep sleep it'll take much less current (good for battery powered applications, but the backlight of the LCD will only work during time, when the ESP is not in sleep, i.e. when it measures dust once every _interval_)
+ * DEEP - jumper used to enable Deep Sleep mode of the ESP8266, otherwise the device will be always on. Note that in deep sleep it'll take much less current (good for battery powered applications, but the backlight of the LCD will only work during time, when the ESP is not in sleep, i.e. when it measures dust once every _interval_).
+ These are no longer needed and most, but DEEP, will be removed in next revision of the board.
 
 ### Putting things together
 
