@@ -16,7 +16,7 @@ In order to build one of your own, you'll need following pieces of HW:
 * **PCB**
 In this git one can find _kicad-ESP8266_ and _GERBERS_ directories. This is a schematics for PCB used in our project.
 Please refer to [PCB](#pcb) section, there will be more about that there.
-Approx cost: <$2 (assuming sb orders >= 10 PCBs)
+Approx cost: <$2.5 (~$25 for 10 PCBs order)
 
 * **PCD8544** 48x84 pixels LCD display
 Please note, that there're few versions of the Nokia 5110 LCD boards. One will need one with following order of GOLDPINs:
@@ -63,30 +63,51 @@ Approx cost: <$2
  Approx cost: TODO
  
 * Other minor **electronic parts**: 
-  * LD33 - Low drop fixed positive voltage regulator 3,3V
-  * TODO (capacitors)
-  * TODO (resistors)
-  * TODO (switches)
-  * TODO (goldpins)
-  * TODO (junctors)
-  * TODO (micro USB socket)
+  * LD33 (SMD) - Low drop fixed positive voltage regulator 3,3V
+  * Capacitors (SMD): C1 = 100uF, C2 = C4 = 10uF, 
+  * Resistors (SMD): R1 = R2 = R3 = R6 = R7 = R8 = 10k, R4 = 220k, R5 = 100k 
+  * Tact Switch 6x6, 13mm (THT): 3x
+  * PINs: 
+    * Single Row Male 2.54 Right Angle Pin Header Connector Strip
+    * Single Row Male 2.54 Breakable Pin Header Connector Strip
+    * Single Row Female 2.54 mm Pin Header Connector Strip
+  * 2.54mm Jumper Cap (Short Circuit Cap) x 4
+  * Female Micro USB socket type B
+    
+ Approx (sum) cost: <$2
 
 * **Optional**: Plexi enclosure, screws, etc - to keep it all together
 
  This is optional, but we've put the drawings for both bottom and top of the enclosure in this git. You may find it [here](https://github.com/kadamski/dust_sensor/tree/master/enclosure)
  
- Approx cost: TODO
+ Approx cost: <$2
 
 #### PCB
+
+I hope you're using Linux, it will be much easier this way. In this git we've prepared PCB schematics that are ready to just be sent over to a PCB factory of some sort. In order to browse those, exprort, etc one will need to install kicad.
+
+  sudo apt-get install kicad
+
+Now please clone the dust_sensor git
+
+  git clone https://github.com/kadamski/dust_sensor.git
+
+Launch kicad, then select _File->Open Project_. Now select _dust_sensor.pro_ from the repository cloned above.
+
+Most of the PCB factories will accept Gerber files. There's already a directory named GERBERS in the git with ready to go files, however you may want to change sth, etc, then just double click on dust_sensor.kicad_pcb in kicad, which will launch _Pcbnew_. Use _File->Fabrication Outputs_ to get what you need.
+
+Just get a quote and order. It looks that chineese factories seem to be cheaper than US/EU based ones. For some strange reason ;-)
 
 ### Putting things together
 
 Yes, it means **soldering**. This is what we would like You to have in your hands in the end. If you're experienced in soldering it should take you no more than 30 minutes. Let's start...
 
 FRONT (do not bother little yellow cable fixtures, you won't need them, this is just my nasty broken board)
+
 ![alt_tag](https://cloud.githubusercontent.com/assets/10147619/21928621/39541596-d98c-11e6-9827-883c0ca2633f.JPG)
 
 BACK
+
 ![alt_tag](https://cloud.githubusercontent.com/assets/10147619/21928620/395327ee-d98c-11e6-9f6a-5046345e58fc.JPG)
 
-### Getting firmware
+### Getting firmware & flashing
