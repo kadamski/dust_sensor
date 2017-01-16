@@ -3,7 +3,7 @@
   (general
     (links 82)
     (no_connects 0)
-    (area 39.424999 30.924999 89.575001 76.075001)
+    (area 37.762459 24.124999 89.575001 82.176201)
     (thickness 1.6)
     (drawings 5)
     (tracks 580)
@@ -1263,7 +1263,7 @@
     )
   )
 
-  (gr_text v0.1dev (at 86.25 69.5) (layer F.Cu)
+  (gr_text v0.4dev (at 86.25 69.5) (layer F.Cu)
     (effects (font (size 1 1) (thickness 0.2)))
   )
   (gr_line (start 39.5 76) (end 39.5 31) (layer Edge.Cuts) (width 0.15))
