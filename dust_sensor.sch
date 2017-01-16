@@ -470,13 +470,13 @@ F 3 "" H 5900 1600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 3250 3700 0    60   Input ~ 0
-DHT_GPIO
+GPIO14
 Text GLabel 7900 3600 2    43   Input ~ 0
-DHT_EXT
+P2
 Text GLabel 10050 4700 1    60   Input ~ 0
-DHT_EXT
+GPIO2
 Text GLabel 10250 4700 1    60   Input ~ 0
-DHT_GPIO
+GPIO14
 $Comp
 L CONN_01X03 P6
 U 1 1 56EB5F9E
@@ -686,7 +686,7 @@ P4
 Text GLabel 4300 7050 1    43   Input ~ 0
 P5
 Text GLabel 4400 7050 1    43   Input ~ 0
-DHT_GPIO
+P2
 Text Notes 3850 6550 0    60   ~ 0
 FREE GPIOS
 $Comp
@@ -771,11 +771,7 @@ Connection ~ 6750 3800
 Wire Wire Line
 	6550 3800 6550 3900
 Wire Wire Line
-	6800 4200 6250 4200
-Wire Wire Line
-	6250 4200 6250 3850
-Wire Wire Line
-	6250 3850 5650 3850
+	5650 3850 6050 3850
 Wire Wire Line
 	2550 4050 3850 4050
 Wire Wire Line
@@ -1066,4 +1062,29 @@ Wire Wire Line
 	5650 1700 5650 1350
 Wire Wire Line
 	7900 3900 7800 3900
+Text GLabel 6050 3850 2    60   Input ~ 0
+GPIO2
+Wire Wire Line
+	6550 4200 6800 4200
+Text GLabel 6450 4900 1    59   Input ~ 0
+GPIO2
+Text GLabel 6650 4900 1    59   Input ~ 0
+GPIO14
+$Comp
+L CONN_01X03 P4
+U 1 1 587C0F2E
+P 6550 5200
+F 0 "P4" H 6550 5400 50  0000 C CNN
+F 1 "EXP_INT" V 6650 5200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 6550 5200 50  0001 C CNN
+F 3 "" H 6550 5200 50  0000 C CNN
+	1    6550 5200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 4900 6450 5000
+Wire Wire Line
+	6550 4200 6550 5000
+Wire Wire Line
+	6650 4900 6650 5000
 $EndSCHEMATC
