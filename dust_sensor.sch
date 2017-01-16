@@ -679,23 +679,21 @@ Text GLabel 7900 3800 2    43   Input ~ 0
 P4
 Text GLabel 7900 3900 2    43   Input ~ 0
 P5
-Text GLabel 4100 7050 1    43   Input ~ 0
-P3
-Text GLabel 4200 7050 1    43   Input ~ 0
-P4
 Text GLabel 4300 7050 1    43   Input ~ 0
+P3
+Text GLabel 4100 7050 1    43   Input ~ 0
 P5
 Text GLabel 4400 7050 1    43   Input ~ 0
 P2
 Text Notes 3850 6550 0    60   ~ 0
 FREE GPIOS
 $Comp
-L CONN_01X04 P8
+L CONN_01X06 P8
 U 1 1 56EC8C96
 P 4250 7550
 F 0 "P8" V 4122 7778 50  0000 L CNN
 F 1 "GPIOS" V 4213 7778 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 4250 7550 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 4250 7550 50  0001 C CNN
 F 3 "" H 4250 7550 50  0000 C CNN
 	1    4250 7550
 	0    1    1    0   
@@ -730,6 +728,34 @@ F 3 "" H 5100 7500 50  0000 C CNN
 $EndComp
 Text Notes 4850 6550 0    60   ~ 0
 DEEP SLEEP
+$Comp
+L CONN_01X02 P10
+U 1 1 56EE8938
+P 5600 1900
+F 0 "P10" V 5472 2028 50  0000 L CNN
+F 1 "PWR" V 5563 2028 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 5600 1900 50  0001 C CNN
+F 3 "" H 5600 1900 50  0000 C CNN
+	1    5600 1900
+	0    1    1    0   
+$EndComp
+Text GLabel 6050 3850 2    60   Input ~ 0
+GPIO2
+Text GLabel 6450 4900 1    59   Input ~ 0
+GPIO2
+Text GLabel 6650 4900 1    59   Input ~ 0
+GPIO14
+$Comp
+L CONN_01X03 P4
+U 1 1 587C0F2E
+P 6550 5200
+F 0 "P4" H 6550 5400 50  0000 C CNN
+F 1 "EXP_INT" V 6650 5200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 6550 5200 50  0001 C CNN
+F 3 "" H 6550 5200 50  0000 C CNN
+	1    6550 5200
+	0    1    1    0   
+$EndComp
 Wire Wire Line
 	5650 3550 6450 3550
 Wire Wire Line
@@ -1022,12 +1048,6 @@ Wire Wire Line
 	7800 3800 7900 3800
 Wire Wire Line
 	7800 3700 7900 3700
-Wire Wire Line
-	4100 7050 4100 7350
-Wire Wire Line
-	4200 7050 4200 7350
-Wire Wire Line
-	4300 7050 4300 7350
 Wire Notes Line
 	4800 6400 4800 7650
 Wire Notes Line
@@ -1043,17 +1063,6 @@ Wire Wire Line
 	5150 7100 5150 7300
 Wire Notes Line
 	5500 6400 5500 7650
-$Comp
-L CONN_01X02 P10
-U 1 1 56EE8938
-P 5600 1900
-F 0 "P10" V 5472 2028 50  0000 L CNN
-F 1 "PWR" V 5563 2028 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 5600 1900 50  0001 C CNN
-F 3 "" H 5600 1900 50  0000 C CNN
-	1    5600 1900
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5550 1700 5550 1350
 Wire Wire Line
@@ -1062,29 +1071,50 @@ Wire Wire Line
 	5650 1700 5650 1350
 Wire Wire Line
 	7900 3900 7800 3900
-Text GLabel 6050 3850 2    60   Input ~ 0
-GPIO2
 Wire Wire Line
 	6550 4200 6800 4200
-Text GLabel 6450 4900 1    59   Input ~ 0
-GPIO2
-Text GLabel 6650 4900 1    59   Input ~ 0
-GPIO14
-$Comp
-L CONN_01X03 P4
-U 1 1 587C0F2E
-P 6550 5200
-F 0 "P4" H 6550 5400 50  0000 C CNN
-F 1 "EXP_INT" V 6650 5200 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 6550 5200 50  0001 C CNN
-F 3 "" H 6550 5200 50  0000 C CNN
-	1    6550 5200
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6450 4900 6450 5000
 Wire Wire Line
 	6550 4200 6550 5000
 Wire Wire Line
 	6650 4900 6650 5000
+$Comp
+L +3.3V #PWR028
+U 1 1 587D3C50
+P 4500 6800
+F 0 "#PWR028" H 4500 6650 50  0001 C CNN
+F 1 "+3.3V" H 4500 6940 50  0000 C CNN
+F 2 "" H 4500 6800 50  0000 C CNN
+F 3 "" H 4500 6800 50  0000 C CNN
+	1    4500 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 6800 4500 7350
+$Comp
+L GND #PWR029
+U 1 1 587D3E31
+P 3850 7200
+F 0 "#PWR029" H 3850 6950 50  0001 C CNN
+F 1 "GND" H 3850 7050 50  0000 C CNN
+F 2 "" H 3850 7200 50  0000 C CNN
+F 3 "" H 3850 7200 50  0000 C CNN
+	1    3850 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 7200 3850 7100
+Wire Wire Line
+	3850 7100 4000 7100
+Wire Wire Line
+	4000 7100 4000 7350
+Text GLabel 4200 7050 1    43   Input ~ 0
+P4
+Wire Wire Line
+	4300 7050 4300 7350
+Wire Wire Line
+	4200 7050 4200 7350
+Wire Wire Line
+	4100 7050 4100 7350
 $EndSCHEMATC
